@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment Six</title>
+    <!-- linked daysiUi -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- linked fontAwosome -->
+    <script src="https://kit.fontawesome.com/a2dccd6894.js" crossorigin="anonymous"></script>
+    <!-- linked google font  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+
+    <!-- costume style  -->
+    <style>
+        body {
+            font-family: "Mulish", sans-serif;
+        }
+
+        .menu-icon :hover {
+            background: none;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="container mx-auto px-2 lg:px-0">
+        <!-- navber section  -->
+        <section class="mt-3">
+            <div class="navbar py-4">
+                <div class="navbar-start">
+                    <div class="dropdown">
+                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4 6h16M4 12h8m-8 6h16" />
+                            </svg>
+                        </div>
+
+                        <!-- icon in mobaile menu  -->
+                        <ul tabindex="0"
+                            class="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52">
+                            <li class="menu-icon border py-2 text-xl rounded-full bg-[#12132d08] ><a><i class=" fa-solid
+                                fa-house"></i></a></li>
+                            <li class="menu-icon border py-2 text-xl rounded-full bg-[#12132d08]"><a><i
+                                        class="fa-solid fa-pen"></i></a></li>
+                            <li class="menu-icon border py-2 text-xl rounded-full bg-[#12132d08]"><a><i
+                                        class="fa-solid fa-user-plus"></i></a></li>
+                            <li class="menu-icon border py-2 text-xl rounded-full bg-[#12132d08]"><a><i
+                                        class="fa-regular fa-flag"></i></a></li>
+                        </ul>
+                    </div>
+                    <a class="btn btn-ghost text-4xl font-extrabold">ReTro</a>
+                </div>
+
+                <!-- large menu  -->
+                <div class="navbar-center hidden lg:flex ">
+                    <ul class="menu menu-horizontal px-1 gap-5">
+                        <li class="menu-icon border py-2 text-xl rounded-full bg-[#12132d08] tooltip" data-tip="Home">
+                            <a><i class="fa-solid fa-house" data-tip="hello"></i></a>
+                        </li>
+
+                        <li class="menu-icon border py-2 text-xl rounded-full bg-[#12132d08] tooltip" data-tip="Edit">
+                            <a><i class="fa-solid fa-pen"></i></a>
+                        </li>
+
+                        <li class="menu-icon border py-2 text-xl rounded-full bg-[#12132d08] tooltip" data-tip="Add">
+                            <a><i class="fa-solid fa-user-plus"></i></a>
+                        </li>
+                        <li class="menu-icon border py-2 text-xl rounded-full bg-[#12132d08] tooltip"
+                            data-tip="Report problem"><a><i class="fa-regular fa-flag"></i></a></li>
+
+                    </ul>
+                </div>
+                <!-- menu button  -->
+                <div class="navbar-end">
+                    <a class="btn bg-[#797DFC] rounded-full text-white px-10 text-xl">Sign in</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- banner section -->
+        <section class=" border-2 min-h-screen  bg-[#12132D] rounded-[48px] ">
+
+            <div class=" flex flex-col relative">
+                <img class="min-h-screen" src="./images/bgbanner.png" alt="">
+
+                <div class="absolute  bottom-0 top-0 lg:top-40 left-10 lg:left-28">
+                    <div class="flex flex-col lg:flex-row gap-0 lg:gap-40 ">
+                        <!-- banner left part  -->
+                        <div class="flex-1 hero-content">
+                            <div class="max-w-md">
+                                <h1 class="text-5xl font-extrabold text-white">
+                                    Welcome to the <br>
+                                    <span class="text-[#797DFCFF]">ReTro</span> Forum
+                                </h1>
+                                <p class="py-6 text-white">"So Retro" is an ironic phrase that refers to an aesthetic that largely surged.</p>
+                                <div>
+                                    <!-- search button  -->
+                                    <label class="input input-bordered flex items-center gap-2">
+                                        <input id="search-input" type="text" class="grow" placeholder="Search here anything" />
+                                        <button onclick="searching()" id="search-btn" class="badge badge-info">Search</button>
+                                    </label>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <!-- banner right part  -->
+                        <div class="border-2 bg-white p-5 lg:p-10 space-y-5 text-2xl rounded-2xl">
+                            <div class="flex justify-between lg:gap-20">
+                                <h1>Registered Users</h1>
+                                <h1>01</h1>
+                            </div>
+                            <div class="flex justify-between lg:gap-20">
+                                <h1>Forum</h1>
+                                <h1>05</h1>
+                            </div>
+                            <div class="flex justify-between lg:gap-20">
+                                <h1>Topics</h1>
+                                <h1>10</h1>
+                            </div>
+                            <div class="flex justify-between lg:gap-20">
+                                <h1>Replies</h1>
+                                <h1>03</h1>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </section>
+
+    </header>
+
+    <!-- end header section  -->
+
+    <!-- start main section  -->
+    <main class="container mx-auto mt-32 lg:mt-10 px-2 lg:p-1">
+        <!-- Let’s Discuss section  -->
+        <section class="mt-10">
+            <!-- discussion title part  -->
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold">Let’s Discuss</h1>
+                <p class="text-lg px-1 lg:px-96">This one goes out to the crotchety old people of eventing you know who you are.You think back fondly on the good old days.</p>
+            </div>
+
+            <!-- post section  -->
+            <div class="mt-12 flex flex-col lg:flex-row gap-5">
+                
+                <!-- left part -->
+                <div id="post-conatiner" class="flex-1">
+                    <!-- all post here  -->
+                </div>
+
+                <!-- right part read count-->
+                <div id="read-count-list" class="rounded-2xl p-5 bg-[#12132d0d]">
+                    <div class="flex gap-10 p-5">
+                        <h1 class="text-2xl font-bold">Title </h1>
+                        <div class="flex gap-2">
+                            <i class="fa-solid fa-check-double text-[#3DCE09] text-2xl"></i>
+
+                            <!-- count number  -->
+                            <h1 class="text-2xl font-bold text-[#12132d99]">Mark as read (<span id="count-number">0</span>)</h1>
+
+                        </div>
+                    </div>
+
+                    <!-- read list -->
+                    <!-- read list hear dainamically -->
+                </div>
+            </div>
+        </section>
+
+        <!-- fouram section -->
+        <section class="mt-20">
+            <div class="hero bg-[#12132D] pt-10 rounded-3xl">
+                <div class="hero-content flex-col lg:flex-row-reverse">
+                    <img src="./images/joinforum.png" class="max-w-sm rounded-lg shadow-2xl" />
+                    <div class="pl-10">
+                        <h1 class="text-5xl font-bold text-white">Join Our Forum</h1>
+                        <p class="py-6 text-xl font-light text-white">Share your favorite opinion and win and wp forum
+                            coffee mug! Yes, you can run unit tests and view the results directly within the app. </p>
+                        <button class="btn border-none text-white text-xl rounded-full bg-[#797DFC] px-8 ">Registered
+                            Now</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Latest post section  -->
+        <section class="mt-20">
+            <div class="text-center">
+                <h1 class="text-4xl font-extrabold mb-5">Latest Posts</h1>
+                <p class="text-lg px-1 lg:px-96">"Retro" often refers to anything that imitates styles or trends from the past, particularly from the 1960s, 70s, 80s, or 90s. This could include retro fashion, music.</p>
+            </div>
+
+            <!-- card section  -->
+            <div id="latest-post" class="mt-10 flex items-center flex-col lg:flex-row gap-3 justify-around">
+                <!-- latest posts card here -->
+            </div>
+        </section>
+
+    </main>
+    <!-- end main section  -->
+    <!-- start footer section  -->
+    <footer class="mt-20">
+        <section>
+            <footer class="footer footer-center p-10 bg-gray-200 text-primary-content">
+                <aside class="text-center text-black">
+                    <h1 class="text-4xl font-bold">ReTro</h1>
+                    <p class="text-xl px-1 lg:px-96"> "ReTro" as a specific term or concept, but without additional context, it's challenging to provide a precise response.</p>
+
+                </aside>
+                <nav>
+                    <div class="grid grid-flow-col gap-4 text-4xl ">
+                        <a class="text-[#1C9BE9]"><i class="fa-brands fa-square-twitter rounded-full"></i></a>
+                        <a class="text-[#0862F7]"><i class="fa-brands fa-facebook"></i></a>
+                        <a class="text-[#F60A5F]"><i class="fa-brands fa-instagram"></i></a>
+                        <a class="text-[#0C61BF]"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </nav>
+
+                <!-- divider -->
+                <div class="flex flex-col w-full">
+                    <div class="divider"></div> 
+                </div>
+                <p class="text-black">Copyright © 2024 - All right reserved</p>
+            </footer>
+        </section>
+    </footer>
+
+
+
+    <!-- linked javaScript -->
+    <script src="./script.js"></script>
+</body>
+
+</html>
